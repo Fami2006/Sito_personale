@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sito personale</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .content-with-image {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .content-with-image img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-with-image p {
+      flex: 1;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+
+    @media (max-width: 600px) {
+      .content-with-image {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .content-with-image img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Mi presento</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="esperienza.html">Esperienza PCTO</a>   
+        <a href="materie.html">Materie 2024/2025</a> 
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="content-with-image">
+        <img src="img/alessandro.jpg" alt="Alessandro" />
+        <p>
+          Mi chiamo Alessandro Famiglini, sono uno studente appassionato di tecnologia, innovazione e tutto ciò che riguarda il mondo digitale.
+          Ho scelto questa scuola ormai cinque anni fa, e ora mi trovo alla fine di questo tortuoso ma splendido viaggio, che mi rimarrà nel cuore per sempre.
+          Se riguardo indietro a quel ragazzino di 13 anni, impaurito da ciò che gli avrebbe riservato il futuro, sorrido e penso a quanto le cose siano andate molto meglio di come si sarebbe mai aspettato.
+          In questi anni ho imparato tante cose in ambito scolastico, e ne sono fiero. Ma ciò che mi riempie di più il cuore è aver imparato tantissimo su me stesso e su come approcciarmi agli altri.
+          Ho conosciuto il mio migliore amico, che ormai è come un fratello, e con lui tantissime altre persone che sono diventate amici importanti.
+          Sono grato per tutto ciò che questi cinque anni mi hanno lasciato, e se potessi tornare indietro, non cambierei nulla.
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <img src="img/img1.jpeg" alt="Ricordo 1">
+      <img src="img/img2.jpeg" alt="Ricordo 2">
+      <img src="img/img3.jpeg" alt="Ricordo 3">
+      <img src="img/img4.jpeg" alt="Ricordo 4">
+      <img src="img/img5.jpeg" alt="Ricordo 5">
+      <img src="img/img6.jpeg" alt="Ricordo 6">
+    </section>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img id="lightbox-img" src="" alt="immagine ingrandita">
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Famiglini Alessandro</p>
+  </footer>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

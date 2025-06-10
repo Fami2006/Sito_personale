@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Materie scolastiche</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 colonne */
+      gap: 20px;
+      margin: 30px auto 0;
+      max-width: 1000px;
+    }
+
+
+    .subject-card {
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 180px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: black;
+    }
+
+    .subject-card:hover {
+      transform: scale(1.05);
+    }
+
+    .subject-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .materia-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .materia-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Le Materie Scolastiche</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="esperienza.html">Esperienza PCTO</a>
+      <a href="materie.html">Materie 2024/2025</a>
+    </nav>
+  </header>
+
+  <main id="main-content"></main>
+
+  <footer>
+    <p>© 2025 Famiglini Alessandro</p>
+  </footer>
+
+  <script>
+    const contenuti = {
+      "scienze-motorie": {
+        titolo: "Scienze Motorie",
+        immagine: "img/scienze-motorie.jpg",
+        testo: "In questa materia ho approfondito l'importanza dell'attività fisica per il benessere e la salute, partecipando a diverse attività sportive e studiando l'anatomia umana."
+      },
+      "sistemi-e-reti": {
+        titolo: "Sistemi e Reti",
+        immagine: "img/sistemi-e-reti.jpg",
+        testo: "Ho studiato l'architettura dei sistemi informatici e le reti di comunicazione, comprendendo il funzionamento dei protocolli e la configurazione delle reti locali."
+      },
+      "inglese": {
+        titolo: "Inglese",
+        immagine: "img/inglese.jpg",
+        testo: "Attraverso la lettura, l'ascolto e la conversazione, ho migliorato le mie competenze linguistiche, focalizzandomi su grammatica, vocabolario e comprensione dei testi."
+      },
+      "informatica": {
+        titolo: "Informatica",
+        immagine: "img/informatica.jpg",
+        testo: "Ho acquisito competenze nella programmazione, nello sviluppo di applicazioni e nella gestione dei database, utilizzando linguaggi come Python e SQL."
+      },
+      "italiano": {
+        titolo: "Italiano",
+        immagine: "img/italiano.jpg",
+        testo: "Ho analizzato opere letterarie, studiato la grammatica e migliorato le mie capacità di scrittura e comprensione del testo."
+      },
+      "storia": {
+        titolo: "Storia",
+        immagine: "img/storia.jpg",
+        testo: "Ho esplorato gli eventi storici più significativi, comprendendo le cause e le conseguenze che hanno plasmato il mondo moderno."
+      },
+      "tpsit": {
+        titolo: "TPSIT",
+        immagine: "img/tpsit.jpg",
+        testo: "Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazioni: ho imparato a progettare e gestire sistemi informatici complessi, integrando hardware e software."
+      },
+      "gpoi": {
+        titolo: "GPOI",
+        immagine: "img/gpoi.jpg",
+        testo: "Gestione Progetto e Organizzazione d'Impresa: ho sviluppato competenze nella pianificazione e gestione di progetti, comprendendo le dinamiche aziendali e organizzative."
+      },
+      "matematica": {
+        titolo: "Matematica",
+        immagine: "img/matematica.jpg",
+        testo: "Ho approfondito concetti di algebra, geometria e analisi, sviluppando capacità logiche e di problem solving."
+      },
+
+      "Intelligenza Artificiale": {
+        titolo: "Intelligenza Artificiale",
+        immagine: "img/ia.jpg",
+        testo: "Ho approfondito concetti di algebra, geometria e analisi, sviluppando capacità logiche e di problem solving."
+      },
+
+      "Ed. CIvica": {
+        titolo: "Educazione Civica",
+        immagine: "img/ed.civica.jpg",
+        testo: "Ho approfondito concetti di algebra, geometria e analisi, sviluppando capacità logiche e di problem solving."
+      }
+
+
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const idMateria = params.get("id");
+    const main = document.getElementById("main-content");
+
+    if (idMateria && contenuti[idMateria]) {
+      const materia = contenuti[idMateria];
+      main.innerHTML = `
+        <div class="materia-container">
+          <img src="${materia.immagine}" alt="${materia.titolo}" />
+          <h2>${materia.titolo}</h2>
+          <p>${materia.testo}</p>
+          <a href="materie.html" class="back-button">← Torna all'elenco</a>
+        </div>
+      `;
+    } else {
+      // Mostra elenco materie
+      main.innerHTML = `<div class="subject-grid">
+        ${Object.entries(contenuti).map(([id, materia]) => `
+          <a href="materie.html?id=${id}" class="subject-card">
+            <img src="${materia.immagine}" alt="${materia.titolo}">
+            <p>${materia.titolo}</p>
+          </a>
+        `).join("")}
+      </div>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La mia esperienza in Clabo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .content-with-image {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .content-with-image img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .content-with-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .content-with-image p {
+      flex: 1;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(255, 255, 255, 0.2);
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 32px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>La mia esperienza in Clabo</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="esperienza.html">Esperienza PCTO</a>
+      <a href="materie.html">Materie 2024/2025</a> 
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Chi è Clabo</h2>
+      <div class="content-with-image">
+        <img src="img/clabo-logo.jpg" alt="Logo Clabo" />
+        <p>
+          <strong>Clabo Group S.p.A.</strong> è un’azienda italiana con sede a Jesi (AN), specializzata nella produzione di 
+          <em>vetrine refrigerate professionali</em> per gelaterie, pasticcerie, bar e ristoranti. È riconosciuta a livello 
+          mondiale per l’unione di tecnologia avanzata e design italiano.
+          <br /><br />
+          Oltre alla sede principale in Italia, Clabo ha anche uno stabilimento produttivo in Cina, a Qingdao, dove 
+          realizza prodotti destinati soprattutto al mercato asiatico. Inoltre, l’azienda possiede una filiale negli 
+          Stati Uniti (Miami), che funge da punto strategico per la distribuzione in Nord America.
+          <br /><br />
+          Clabo esporta in oltre 90 paesi nel mondo, tra cui: <strong>Cina, Stati Uniti, Germania, Francia, Brasile, Corea del Sud</strong> e molti altri. 
+          I suoi prodotti si possono trovare in catene di gelaterie, bar e locali di alto livello, grazie a una rete 
+          commerciale internazionale ben strutturata.
+        </p>
+      </div>
+    </section>
+    
+
+    <section>
+      <h2>Di cosa si occupa Clabo</h2>
+      <div class="content-with-image">
+        <img src="img/espositori.jpg" alt="Vetrine refrigerate" />
+        <p>Progetta e realizza espositori tecnologici con design innovativo e sostenibile, destinati a professionisti del settore alimentare.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cosa ho fatto</h2>
+      <p>Nelle settimane di stage presso la Clabo s.p.a mi sono state assegnate non troppe mansioni, il tutor che
+        mi avrebbe dovuto seguire non sapeva bene come comportarsi e perciò sono stato poco attivo. Durante il giorno infatti
+        la cosa più importante che facevo era fare il calcolo cosi su SAP, applicazione che usavano per la gestione dei dati dell'azienda.
+        Era una cosa semplice, ma che almeno mi teneva impegnato un paio di minuti. Per il resto mi capitava di andare in giro per l'azienda
+        e cambiare i rulli delle stampanti o di avere dei mini compiti come svolgere qualche query data dal tutor.
+      </p>
+    </section>
+
+    <section>
+      <h2>Cosa ho imparato</h2>
+      <p>Se dal lato pratico ho fatto poco, ho avuto la possibilità di vedere come funziona e come è organizzata 
+        una grande azienda, vedendo la divisione tra uffici e produzione. Ho inoltre imparato qualcosa sulla applicazione SAP.
+        Ma soprattutto per la prima volta mi sono interfacciato con il mondo del lavoro, cercando di adattarmi agli
+        orari e al contatto con gli altri dipendenti dell'azienda, cercando sempre di fare del mio meglio, arrivando presto in ufficio
+        e rendendomi sempre disponibile all'aiuto.      
+      </p>
+    </section>
+  
+    <section>
+      <h2>Conclusioni sull'esperienza</h2>
+      <p>Se questa esperienza mi ha lasciato qualcosa è sicuramente in primis la consapevolezza di come sia un ambiente
+        lavorativo come l'ufficio, con persone prese dal loro lavoro e spesso agitate e nervose quando qualcosa non andava 
+        come previsto. Tramite l'osservazione attenta che ho adottato, ho visto come le varie persone siano cordiali tra loro,
+        ma poi subito dopo si lamentano di queste ultime, rendendo cosi tutto il loro rapporto solo una 'finzione', come dovessero
+        recitare una parte imposta. Perciò ho capito che nel mondo del lavoro non c'è tempo per le simpatie e antipatie, bisogna lavorare
+        in maniera congiunta e collaborativa, per portare al termine il lavoro assegnato.
+
+        Ringrazio quindi Clabo e la scuola per avermi dato questa possibilità, non tanto per la parte pratica, ma più per la parte umana.
+        
+      </p>
+    </section>
+  
+  </main>
+
+
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="immagine ingrandita" />
+  </div>
+
+  <footer>
+    <p>© 2025 Famiglini Alessandro – PCTO Clabo Group S.p.A.</p>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    document.querySelectorAll('.content-with-image img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
