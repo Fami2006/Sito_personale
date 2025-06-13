@@ -26,12 +26,11 @@
 
     .subject-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr); /* 5 colonne */
+      grid-template-columns: repeat(5, 1fr);
       gap: 20px;
       margin: 30px auto 0;
       max-width: 1000px;
     }
-
 
     .subject-card {
       background: white;
@@ -107,9 +106,7 @@
       "scienze-motorie": {
         titolo: "Scienze Motorie",
         immagine: "img/scienze-motorie.jpg",
-        testo:`Durante le lezioni di scienze motorie abbiamo studiato come funziona il nostro corpo durante le attività sportive, e in particolare su come preparare al meglio il nostro
-        corpo a questi sforzi. Questo argomento infatti mi ha affascinato molto, fino ad arrivare ad approfondirlo anhce da solo, essendo sempre stata una persona abbastanza sportiva, in cerca di miglioramenti`
-
+        testo: `Durante le lezioni di scienze motorie abbiamo studiato come funziona il nostro corpo durante le attività sportive, e in particolare su come preparare al meglio il nostro corpo a questi sforzi. Questo argomento infatti mi ha affascinato molto, fino ad arrivare ad approfondirlo anche da solo, essendo sempre stata una persona abbastanza sportiva, in cerca di miglioramenti.`
       },
       "sistemi-e-reti": {
         titolo: "Sistemi e Reti",
@@ -127,14 +124,14 @@
         testo: "Ho acquisito competenze nella programmazione, nello sviluppo di applicazioni e nella gestione dei database, utilizzando linguaggi come Python e SQL."
       },
       "italiano": {
-       titolo: "Italiano",
-       immagine: "img/italiano.jpg",
-       testo: `Durante l'anno mi ha colpito in particolare l'autore Luigi Pirandello, soprattutto per la sua visione profonda e moderna dell'essere umano. La sua riflessione sulla comicità e sul concetto di "maschere" mi ha fatto pensare a quanto spesso ognuno di noi sia costretto a recitare un ruolo nella società. Nel romanzo <em>Uno, nessuno e centomila</em>, per esempio, il protagonista Vitangelo Moscarda scopre che ognuno lo vede in modo diverso e decide di liberarsi da tutte le immagini che gli altri hanno di lui. Questo porta gli altri a considerarlo pazzo, ma in realtà è forse l’unico personaggio veramente lucido. Pirandello ci mostra che spesso chi cerca di uscire dalle convenzioni sociali viene etichettato come folle, ma è proprio lui ad avere una consapevolezza più autentica della propria identità.`
+        titolo: "Italiano",
+        immagine: "img/italiano.jpg",
+        testo: `Durante l'anno mi ha colpito in particolare l'autore Luigi Pirandello, soprattutto per la sua visione profonda e moderna dell'essere umano. La sua riflessione sulla comicità e sul concetto di <strong>maschere</strong> mi ha fatto pensare a quanto spesso ognuno di noi sia costretto a recitare un ruolo nella società. Nel romanzo <em>Uno, nessuno e centomila</em>, per esempio, il protagonista Vitangelo Moscarda scopre che ognuno lo vede in modo diverso e decide di liberarsi da tutte le immagini che gli altri hanno di lui. Questo porta gli altri a considerarlo pazzo, ma in realtà è forse l’unico personaggio veramente lucido. Pirandello ci mostra che spesso chi cerca di uscire dalle convenzioni sociali viene etichettato come folle, ma è proprio lui ad avere una consapevolezza più autentica della propria identità.`
       },
       "storia": {
-       titolo: "Storia",
-       immagine: "img/storia.jpg",
-       testo: `Durante l’anno ho approfondito la **Seconda Guerra Mondiale**, un conflitto devastante che ha coinvolto gran parte del mondo tra il 1939 e il 1945. Un momento particolarmente significativo è stata la **Notte dei Cristalli** (Kristallnacht), la notte tra il **9 e il 10 novembre 1938**, quando in Germania e nei territori annessi le autorità naziste assassinarono più di 90 ebrei, arrestarono circa 30.000 uomini, incendiarono oltre 1.400 sinagoghe e distrussero migliaia di negozi e case ebraiche :contentReference[oaicite:1]{index=1}. È stato un **punto di svolta**: da legislazione discriminatoria si passò a una violenza aperta, e molte famiglie capirono che per gli ebrei in Germania **non c’era più futuro** :contentReference[oaicite:2]{index=2}. Questo evento segna l’inizio della fase più violenta dell’Olocausto, preludio alla deportazione e allo sterminio sistematico.`
+        titolo: "Storia",
+        immagine: "img/storia.jpg",
+        testo: `Durante l’anno ho approfondito la <strong>Seconda Guerra Mondiale</strong>, un conflitto devastante che ha coinvolto gran parte del mondo tra il 1939 e il 1945. Un momento particolarmente significativo è stata la <strong>Notte dei Cristalli</strong> (Kristallnacht), la notte tra il <strong>9 e il 10 novembre 1938</strong>, quando in Germania e nei territori annessi le autorità naziste assassinarono più di 90 ebrei, arrestarono circa 30.000 uomini, incendiarono oltre 1.400 sinagoghe e distrussero migliaia di negozi e case ebraiche. È stato un <strong>punto di svolta</strong>: da legislazione discriminatoria si passò a una violenza aperta, e molte famiglie capirono che per gli ebrei in Germania <strong>non c’era più futuro</strong>. Questo evento segna l’inizio della fase più violenta dell’Olocausto, preludio alla deportazione e allo sterminio sistematico.`
       },
       "tpsit": {
         titolo: "TPSIT",
@@ -151,20 +148,16 @@
         immagine: "img/matematica.jpg",
         testo: "Ho approfondito concetti di algebra, geometria e analisi, sviluppando capacità logiche e di problem solving."
       },
-
       "Intelligenza Artificiale": {
         titolo: "Intelligenza Artificiale",
         immagine: "img/ia.jpg",
-        testo: "Ho approfondito concetti di algebra, geometria e analisi, sviluppando capacità logiche e di problem solving."
+        testo: "Ho approfondito concetti legati al funzionamento delle reti neurali, machine learning e applicazioni moderne dell’IA nella società."
       },
-
       "Ed. CIvica": {
         titolo: "Educazione Civica",
         immagine: "img/ed.civica.jpg",
-        testo: "Ho approfondito concetti di algebra, geometria e analisi, sviluppando capacità logiche e di problem solving."
+        testo: "Ho riflettuto su tematiche di cittadinanza attiva, diritti umani, Costituzione e sostenibilità ambientale, sviluppando maggiore consapevolezza del mio ruolo nella società."
       }
-
-
     };
 
     const params = new URLSearchParams(window.location.search);
@@ -182,7 +175,6 @@
         </div>
       `;
     } else {
-      // Mostra elenco materie
       main.innerHTML = `<div class="subject-grid">
         ${Object.entries(contenuti).map(([id, materia]) => `
           <a href="materie.html?id=${id}" class="subject-card">
